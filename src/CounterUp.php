@@ -14,7 +14,7 @@ use QCubed\Type;
 
 // we need a better way of reconfiguring JS assets
 if (!defined('QCUBED_COUNTERUP_ASSETS_URL')) {
-    define('QCUBED_COUNTERUP_ASSETS_URL', '/kukrik/counterup/assets');
+    define('QCUBED_COUNTERUP_ASSETS_URL', QCUBED_BASE_URL . '/../kukrik/counterup/assets');
 }
 
 /**
