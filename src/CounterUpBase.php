@@ -4,7 +4,7 @@
  * This file contains the QCounterUp Class.
  */
 
-namespace Kukrik\CounterUp;
+namespace QCubed\Plugin;
 
 use QCubed as Q;
 use QCubed\Project\Application;
@@ -24,7 +24,7 @@ if (!defined('QCUBED_COUNTERUP_ASSETS_URL')) {
  *
  */
 
-class CounterUp extends BlockControl {
+class CounterUpBase extends BlockControl {
 
     /** @var  integer Delay */
     protected $intDelay = '10';
@@ -140,15 +140,4 @@ class CounterUp extends BlockControl {
                 break;
         }
 	}
-
-    /**
-     * @return Q\ModelConnector\Param[]
-     */
-    public static function getModelConnectorParams() {
-        return array_merge(parent::GetModelConnectorParams(), array(
-            new Q\ModelConnector\Param (get_called_class(), 'Data', '', Type::STRING),
-            new Q\ModelConnector\Param (get_called_class(), 'Delay', '', Type::INTEGER),
-            new Q\ModelConnector\Param (get_called_class(), 'Time', '', Type::INTEGER),
-        ));
-    }
 }
