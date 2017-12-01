@@ -7,7 +7,6 @@
 namespace QCubed\Plugin;
 
 use QCubed as Q;
-use QCubed\Project\Application;
 use QCubed\Exception\Caller;
 use QCubed\Control\BlockControl;
 use QCubed\Type;
